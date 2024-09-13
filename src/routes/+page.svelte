@@ -1,0 +1,15 @@
+<script>
+	import CompanyCard from '$lib/CompanyCard.svelte';
+	import { store } from '$lib/store';
+	const sorted = Object.keys($store).sort();
+</script>
+
+<div class="p-4">
+	{#each sorted as companyName}
+		<CompanyCard
+			{companyName}
+			catchPhrase={$store[companyName].catchPhrase}
+			employeeCount={$store[companyName].employeeCount}
+		/>
+	{/each}
+</div>
