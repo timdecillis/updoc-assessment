@@ -4,33 +4,29 @@
 
 	const { name, email, phone } = employee;
 
-	const companies = Object.keys($store);
+	const companies = Object.keys($store).filter((name) => name !== companyName);
 	let selectedCompany: string;
 	const handleReassign = () => {
 		store.update((currentStore) => {
-		// Get the employees from the former and new companies
-		const formerCompanyEmps = currentStore[companyName]?.employees || [];
-		const reassignedCompanyEmps = currentStore[selectedCompany]?.employees || [];
+			const formerCompanyEmps = currentStore[companyName]?.employees || [];
+			const reassignedCompanyEmps = currentStore[selectedCompany]?.employees || [];
 
-		// Add the employee to the new company's list
-		const newReassignedCompanyEmps = [...reassignedCompanyEmps, employee];
+			const newReassignedCompanyEmps = [...reassignedCompanyEmps, employee];
 
-		// Remove the employee from the former company's list
-		const newFormerCompanyEmps = formerCompanyEmps.filter(emp => emp.name !== employee.name);
+			const newFormerCompanyEmps = formerCompanyEmps.filter((emp) => emp.name !== employee.name);
 
-		// Update the current store with the new lists
-		return {
-			...currentStore,
-			[companyName]: {
-				...currentStore[companyName],
-				employees: newFormerCompanyEmps
-			},
-			[selectedCompany]: {
-				...currentStore[selectedCompany],
-				employees: newReassignedCompanyEmps
-			}
-		};
-	});
+			return {
+				...currentStore,
+				[companyName]: {
+					...currentStore[companyName],
+					employees: newFormerCompanyEmps
+				},
+				[selectedCompany]: {
+					...currentStore[selectedCompany],
+					employees: newReassignedCompanyEmps
+				}
+			};
+		});
 	};
 </script>
 
