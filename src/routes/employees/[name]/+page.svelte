@@ -18,5 +18,5 @@
 </script>
 
 {#each sorted as employee, i}
-	<EmployeeCard name={employee.name} email={employee.email} phone={employee.phone} />
+	<EmployeeCard {companyName} name={employee.name} email={employee.email} phone={employee.phone} />
 {/each}
