@@ -19,11 +19,13 @@
 				...currentStore,
 				[companyName]: {
 					...currentStore[companyName],
-					employees: newFormerCompanyEmps
+					employees: newFormerCompanyEmps,
+          employeeCount: currentStore[companyName].employeeCount - 1
 				},
 				[selectedCompany]: {
 					...currentStore[selectedCompany],
-					employees: newReassignedCompanyEmps
+					employees: newReassignedCompanyEmps,
+          employeeCount: currentStore[selectedCompany].employeeCount + 1
 				}
 			};
 		});
