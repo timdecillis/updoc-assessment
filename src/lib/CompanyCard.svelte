@@ -1,7 +1,7 @@
-<script>
+<script lang="ts">
   export let companyName
   import { store } from "./store";
-  const catchPhrase = $store[companyName].catchPhrase
+  const catchPhrase: string = $store[companyName].catchPhrase
   const employeeCount = $store[companyName].employeeCount
 </script>
 
