@@ -10,10 +10,9 @@
 		return stringArray[stringArray.length - 1];
 	}
 
-	let employees = [];
+	let employees: EmployeeType[] = [];
 	let sorted: EmployeeType[] = [];
 
-	// Reactive statement to update employees and sorted list when store changes
 	$: {
 		employees = $store[companyName]?.employees || [];
 		sorted = [...employees].sort((first, second) => {
