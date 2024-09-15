@@ -1,5 +1,5 @@
 <script>
-  export let companyName, catchPhrase, href, employeeCount
+  export let companyName, catchPhrase, employeeCount
 </script>
 
 <div class="bg-gradient-to-br hover:from-green-300 hover:to-blue-400 border border-black bg-slate-200 m-2 p-2 rounded-md">
