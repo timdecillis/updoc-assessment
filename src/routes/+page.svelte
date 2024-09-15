@@ -8,8 +8,6 @@
 	{#each sorted as companyName}
 		<CompanyCard
 			{companyName}
-			catchPhrase={$store[companyName].catchPhrase}
-			employeeCount={$store[companyName].employeeCount}
 		/>
 	{/each}
 </div>

@@ -1,5 +1,8 @@
 <script>
-  export let companyName, catchPhrase, employeeCount
+  export let companyName
+  import { store } from "./store";
+  const catchPhrase = $store[companyName].catchPhrase
+  const employeeCount = $store[companyName].employeeCount
 </script>
 
 <div class="bg-gradient-to-br hover:from-green-300 hover:to-blue-400 border border-black bg-slate-200 m-2 p-2 rounded-md">
