@@ -1,16 +1,17 @@
-<script>
+<script lang="ts">
 	import EmployeeCard from '$lib/EmployeeCard.svelte';
 	import { store } from '$lib/store.js';
 	export let data;
 	const companyName = data.companyName;
+	import type { EmployeeType } from '$lib/types.js';
 
-	function lastName(name) {
+	function lastName(name: string) {
 		const stringArray = name.split(' ');
 		return stringArray[stringArray.length - 1];
 	}
 
 	let employees = [];
-	let sorted = [];
+	let sorted: EmployeeType[] = [];
 
 	// Reactive statement to update employees and sorted list when store changes
 	$: {
