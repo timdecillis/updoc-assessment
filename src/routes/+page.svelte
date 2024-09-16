@@ -3,7 +3,7 @@
 	import { store } from '$lib/store';
 	const sorted = Object.keys($store).sort();
 
-	import { companiesStore } from '$lib/modStore';
+	// import { companiesStore } from '$lib/modStore';
 </script>
 
 <div class="p-4">
