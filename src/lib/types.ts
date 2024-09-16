@@ -18,6 +18,7 @@ export type CompanyType = {
 	employeeCount: number;
 	name: string;
 	employees: EmployeeType[];
+	id: number
 };
 
 type EmployeeCompanyType = {
