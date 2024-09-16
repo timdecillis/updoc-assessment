@@ -1,12 +1,11 @@
 import type { EmployeeType, StoreType } from '$lib/types';
-import axios from 'axios';
 
 export async function load() {
 	const companiesData: StoreType = {};
 
 	const url = 'https://jsonplaceholder.typicode.com/users';
-	const response = await axios.get(url);
-	const data = response.data;
+	const response = await fetch(url);
+	const data =  await response.json();
 
 	data.forEach((employee: EmployeeType, i: number) => {
 		const employeeCompany = employee.company;
