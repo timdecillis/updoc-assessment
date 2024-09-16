@@ -1,13 +1,14 @@
 <script lang="ts">
 	export let companyName, employee;
 	import { store } from './store';
+	import type { StoreType } from './types';
 
 	const { name, email, phone } = employee;
 
 	const companies = Object.keys($store).filter((name) => name !== companyName);
 	let selectedCompany: string;
 	const handleReassign = () => {
-		store.update((currentStore) => {
+		store.update((currentStore: StoreType) => {
 			const formerCompanyEmps = currentStore[companyName]?.employees || [];
 			const reassignedCompanyEmps = currentStore[selectedCompany]?.employees || [];
 

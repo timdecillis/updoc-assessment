@@ -3,7 +3,7 @@
 	import { store } from '$lib/store.js';
 	export let data;
 	const companyName = data.companyName;
-	import type { EmployeeType, Store } from '$lib/types.js';
+	import type { EmployeeType, StoreType } from '$lib/types.js';
 
 	function lastName(name: string) {
 		const stringArray = name.split(' ');
@@ -14,7 +14,7 @@
 	let sorted: EmployeeType[] = [];
 
 	$: {
-		const typedStore = $store as Store
+		const typedStore = $store as StoreType
 		employees = $store[companyName]?.employees || [];
 		sorted = [...employees].sort((first, second) => {
 			const lastName = (name: string) => name.split(' ').pop();
