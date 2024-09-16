@@ -1,8 +1,8 @@
-import type { EmployeeType } from '$lib/types';
+import type { EmployeeType, Store } from '$lib/types';
 import axios from 'axios'
 
 export async function load() {
-  const companiesData = {}
+  const companiesData :Store = {}
 
   const url = 'https://jsonplaceholder.typicode.com/users'
   const response = await axios.get(url)
