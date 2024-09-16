@@ -3,7 +3,7 @@
 	import { store } from '$lib/store.js';
 	export let data;
 	const companyName = data.companyName;
-	import type { EmployeeType } from '$lib/types.js';
+	import type { EmployeeType, Store } from '$lib/types.js';
 
 	function lastName(name: string) {
 		const stringArray = name.split(' ');
@@ -14,9 +14,10 @@
 	let sorted: EmployeeType[] = [];
 
 	$: {
+		const typedStore = $store as Store
 		employees = $store[companyName]?.employees || [];
 		sorted = [...employees].sort((first, second) => {
-			const lastName = (name) => name.split(' ').pop();
+			const lastName = (name: string) => name.split(' ').pop();
 			if (lastName(first.name) < lastName(second.name)) return -1;
 			if (lastName(first.name) > lastName(second.name)) return 1;
 			return 0;
