@@ -4,12 +4,15 @@
 	const sorted = Object.keys($store).sort();
 
 	// import { companiesStore } from '$lib/modStore';
+	// import { onMount } from 'svelte';
+
+	// onMount(() => {
+	// 	companiesStore.fetchCompanies();
+	// });
 </script>
 
 <div class="p-4">
 	{#each sorted as companyName}
-		<CompanyCard
-			{companyName}
-		/>
+		<CompanyCard {companyName} />
 	{/each}
 </div>
