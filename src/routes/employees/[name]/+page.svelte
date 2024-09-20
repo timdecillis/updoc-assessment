@@ -1,6 +1,6 @@
 <script lang="ts">
 	import EmployeeCard from '$lib/EmployeeCard.svelte';
-	import { store } from '$lib/store.ts';
+	import { store } from '$lib/store.js';
 	export let data;
 	const companyName = data.companyName;
 	import type { EmployeeType, StoreType } from '$lib/types.js';

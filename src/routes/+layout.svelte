@@ -1,6 +1,6 @@
 <script>
 	import '../app.css';
-	import { store } from '$lib/store';
+	import { store } from '$lib/store.js';
 	export let data;
 	store.set(data);
 </script>
