@@ -21,12 +21,12 @@
 				[companyName]: {
 					...currentStore[companyName],
 					employees: newFormerCompanyEmps,
-          employeeCount: currentStore[companyName].employeeCount - 1
+					employeeCount: currentStore[companyName].employeeCount - 1
 				},
 				[selectedCompany]: {
 					...currentStore[selectedCompany],
 					employees: newReassignedCompanyEmps,
-          employeeCount: currentStore[selectedCompany].employeeCount + 1
+					employeeCount: currentStore[selectedCompany].employeeCount + 1
 				}
 			};
 		});
@@ -47,4 +47,7 @@
 		class="rounded-md p-2 border-2 border-slate-500 hover:bg-slate-500 hover:text-white"
 		on:click={handleReassign}>Reassign</button
 	>
+	<a href={`${companyName}/update`}>
+		<div>Update employees</div>
+	</a>
 </div>
