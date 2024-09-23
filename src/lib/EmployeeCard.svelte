@@ -48,6 +48,6 @@
 		on:click={handleReassign}>Reassign</button
 	>
 	<a href={`${companyName}/update`}>
-		<div>Update employees</div>
+		<div class=" text-center items-center h-full hover:bg-slate-300 rounded-sm w-36" >Update employees</div>
 	</a>
 </div>
