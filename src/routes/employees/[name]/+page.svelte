@@ -9,7 +9,7 @@
 	let sorted: EmployeeType[] = [];
 
 	$: {
-		const typedStore = $store as StoreType
+		const typedStore = $store as StoreType;
 		employees = $store[companyName]?.employees || [];
 		sorted = [...employees].sort((first, second) => {
 			const lastName = (name: string) => name?.split(' ').pop() || '';
@@ -23,3 +23,8 @@
 {#each sorted as employee, i}
 	<EmployeeCard {employee} {companyName} />
 {/each}
+<a href={`${companyName}/update`}>
+	<div class=" text-center items-center h-full hover:bg-slate-300 rounded-sm w-36">
+		Update employees
+	</div>
+</a>
