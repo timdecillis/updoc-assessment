@@ -47,7 +47,4 @@
 		class="rounded-md p-2 border-2 border-slate-500 hover:bg-slate-500 hover:text-white"
 		on:click={handleReassign}>Reassign</button
 	>
-	<a href={`${companyName}/update`}>
-		<div class=" text-center items-center h-full hover:bg-slate-300 rounded-sm w-36" >Update employees</div>
-	</a>
 </div>
