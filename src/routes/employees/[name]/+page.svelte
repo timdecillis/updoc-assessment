@@ -24,7 +24,7 @@
 	<EmployeeCard {employee} {companyName} />
 {/each}
 <a href={`${companyName}/update`}>
-	<div class=" text-center items-center h-full hover:bg-slate-300 rounded-sm w-36">
+	<div class="m-3 py-4 text-center items-center h-full hover:bg-slate-300 rounded-md w-36">
 		Update employees
 	</div>
 </a>
