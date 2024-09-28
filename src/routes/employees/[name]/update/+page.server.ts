@@ -2,10 +2,10 @@ export function load() {
 	return {
 		companies: [
 			{
-				foo: 'bar'
+				name: 'foo'
 			},
 			{
-				bar: 'foo'
+				name: 'bar'
 			}
 		]
 	};
