@@ -27,7 +27,7 @@
 			};
 		});
 	};
-  const employee = 'foobar'
+	const employee = 'foobar';
 	const email = 'foo';
 	const phone = 'bar';
 	const companyName = 'foo';
