@@ -33,7 +33,7 @@
 	};
 </script>
 
-<a href={id} >
+<a href={`${companyName}/${id}`} >
 	<div class="p-4 border-black">
 		<div class="text-xl font-bold">{name}</div>
 		<div><span class="font-bold">Email:</span> {email}</div>
