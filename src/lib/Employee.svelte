@@ -33,7 +33,7 @@
 	const companyName = 'foo';
 </script>
 
-<div>Employee Details</div>
+<div>{employee}</div>
 <div><span class="font-bold">Email:</span> {email}</div>
 <div><span class="font-bold">Phone: </span>{phone}</div>
 <label for="companies">Reassign:</label>
