@@ -1,6 +1,6 @@
 <script>
 	export let data;
-	const companyName = data.companyName;
+	const companyName = data.company;
 </script>
 
 <div class="text-3xl text-center border-b-2 p-4">{companyName}</div>

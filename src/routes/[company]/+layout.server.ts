@@ -1,4 +1,4 @@
 export function load({ params }) {
-  const companyName = params.name
-  return { companyName }
+  const {company} = params
+  return { company }
 }
