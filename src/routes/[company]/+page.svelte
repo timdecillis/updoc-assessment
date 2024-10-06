@@ -2,7 +2,7 @@
 	import EmployeeCard from '$lib/EmployeeCard.svelte';
 	import { store } from '$lib/store.js';
 	export let data;
-	const companyName = data.companyName;
+	const companyName = data.company;
 	import type { EmployeeType, StoreType } from '$lib/types.js';
 
 	let employees: EmployeeType[] = [];
