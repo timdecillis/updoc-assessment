@@ -1,6 +1,10 @@
 <script lang="ts">
 	import { store } from './store';
 	import type { StoreType } from './types';
+	export let data;
+	const { employeeID, companyName } = data;
+	const email = 'foo';
+	const phone = 'bar';
 	const companies = Object.keys($store).filter((name) => name !== companyName);
 	let selectedCompany: string;
 	const handleReassign = () => {
@@ -27,13 +31,9 @@
 			};
 		});
 	};
-	export let data;
-	const { employeeID, companyName } = data;
-	const email = 'foo';
-	const phone = 'bar';
 </script>
 
-<div>{employee}</div>
+<div>{employeeID}</div>
 <div><span class="font-bold">Email:</span> {email}</div>
 <div><span class="font-bold">Phone: </span>{phone}</div>
 <label for="companies">Reassign:</label>
