@@ -27,10 +27,10 @@
 			};
 		});
 	};
-	const employee = 'foobar';
+	export let data;
+	const { employeeID, companyName } = data;
 	const email = 'foo';
 	const phone = 'bar';
-	const companyName = 'foo';
 </script>
 
 <div>{employee}</div>

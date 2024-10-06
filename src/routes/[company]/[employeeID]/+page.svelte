@@ -4,4 +4,4 @@
 	const { employeeID, company } = data;
 </script>
 
-<Employee />
+<Employee {employeeID} {company} />
