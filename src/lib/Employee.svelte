@@ -5,7 +5,14 @@
 	export let employeeID;
 	export let company;
 
-	const companies = Object.keys($store).filter((name) => name !== company);
+	employeeID = parseInt(employeeID);
+
+	const employee = $store[company].employees.filter((employee) => {
+		return employee.id === employeeID;
+	})[0];
+
+	const companiesToSelect = Object.keys($store).filter((name) => name !== company);
+
 	let selectedCompany: string;
 	const handleReassign = () => {
 		store.update((currentStore: StoreType) => {
@@ -38,7 +45,7 @@
 <div><span class="font-bold">Phone: </span>{phone}</div>
 <label for="companies">Reassign:</label>
 <select bind:value={selectedCompany} id="companies" name="options">
-	{#each companies as company}
+	{#each companiesToSelect as company}
 		<option selected={companyName === company} value={company}>{company}</option>
 	{/each}
 </select>
