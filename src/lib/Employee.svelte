@@ -1,35 +1,36 @@
 <script lang="ts">
 	import { store } from './store';
 	import type { StoreType } from './types';
-	export let data;
-	const { employeeID, company } = data;
 
-	// const companies = Object.keys($store).filter((name) => name !== companyName);
+	export let employeeID;
+	export let company;
+
+	const companies = Object.keys($store).filter((name) => name !== company);
 	let selectedCompany: string;
-	// const handleReassign = () => {
-	// 	store.update((currentStore: StoreType) => {
-	// 		const formerCompanyEmps = currentStore[companyName]?.employees || [];
-	// 		const reassignedCompanyEmps = currentStore[selectedCompany]?.employees || [];
+	const handleReassign = () => {
+		store.update((currentStore: StoreType) => {
+			const formerCompanyEmps = currentStore[company]?.employees || [];
+			const reassignedCompanyEmps = currentStore[selectedCompany]?.employees || [];
 
-	// 		const newReassignedCompanyEmps = [...reassignedCompanyEmps, employee];
+			const newReassignedCompanyEmps = [...reassignedCompanyEmps, employee];
 
-	// 		const newFormerCompanyEmps = formerCompanyEmps.filter((emp) => emp.name !== employee.name);
+			const newFormerCompanyEmps = formerCompanyEmps.filter((emp) => emp.name !== employee.name);
 
-	// 		return {
-	// 			...currentStore,
-	// 			[companyName]: {
-	// 				...currentStore[companyName],
-	// 				employees: newFormerCompanyEmps,
-	// 				employeeCount: currentStore[companyName].employeeCount - 1
-	// 			},
-	// 			[selectedCompany]: {
-	// 				...currentStore[selectedCompany],
-	// 				employees: newReassignedCompanyEmps,
-	// 				employeeCount: currentStore[selectedCompany].employeeCount + 1
-	// 			}
-	// 		};
-	// 	});
-	// };
+			return {
+				...currentStore,
+				[company]: {
+					...currentStore[company],
+					employees: newFormerCompanyEmps,
+					employeeCount: currentStore[company].employeeCount - 1
+				},
+				[selectedCompany]: {
+					...currentStore[selectedCompany],
+					employees: newReassignedCompanyEmps,
+					employeeCount: currentStore[selectedCompany].employeeCount + 1
+				}
+			};
+		});
+	};
 </script>
 
 <!-- <div>{employeeID}</div>
