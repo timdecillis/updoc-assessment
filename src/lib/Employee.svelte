@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { goto } from '$app/navigation';
 	import { store } from './store';
 	import type { StoreType } from './types';
 
@@ -39,6 +40,7 @@
 				}
 			};
 		});
+		goto(`./`)
 	};
 </script>
 
