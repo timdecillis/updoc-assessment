@@ -11,7 +11,7 @@
 		return employee.id === employeeID;
 	})[0];
 
-	const { email, phone } = employee;
+	const { email, phone, name } = employee;
 
 	const companiesToSelect = Object.keys($store).filter((name) => name !== company);
 
@@ -42,10 +42,10 @@
 	};
 </script>
 
-<div>{employeeID}</div>
+<div>{name}</div>
 <div><span class="font-bold">Email:</span> {email}</div>
 <div><span class="font-bold">Phone: </span>{phone}</div>
-<label for="companies">Reassign:</label>
+<label for="companies">Reassign to:</label>
 <select bind:value={selectedCompany} id="companies" name="options">
 	{#each companiesToSelect as companyChoice}
 		<option selected={company === companyChoice} value={companyChoice}>{companyChoice}</option>
