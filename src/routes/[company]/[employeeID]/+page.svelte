@@ -1,7 +1,7 @@
 <script>
 	import Employee from '$lib/Employee.svelte';
 	export let data;
-	const { employeeID, companyName } = data;
+	const { employeeID, company } = data;
 </script>
 
-<Employee {employeeID} {companyName} />
+<Employee {employeeID} {company} />
