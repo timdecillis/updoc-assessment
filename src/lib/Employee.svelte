@@ -40,7 +40,7 @@
 				}
 			};
 		});
-		goto(`./`, { replaceState: true });
+		goto(`../${company}`, { replaceState: true });
 	};
 </script>
 
