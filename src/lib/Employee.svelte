@@ -40,8 +40,8 @@
 				}
 			};
 		});
-		goto(`../${company}`, { replaceState: true });
-		history.replaceState({some: 'state'}, 'Company', `../${company}`)
+		// goto(`../${company}`, { replaceState: true });
+		history.replaceState({ some: 'state' }, 'Company', `../${company}`);
 	};
 </script>
 
