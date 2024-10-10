@@ -9,7 +9,7 @@ export async function load() {
 
 	data.forEach((employee: EmployeeType, i: number) => {
 		const employeeCompany = employee.company;
-		const companyName = employee.company.name;
+		const companyName = employeeCompany.name;
 		if (!companiesData[companyName]) {
 			companiesData[companyName] = { ...employeeCompany, employeeCount: 0, employees: [], id: i };
 		}
