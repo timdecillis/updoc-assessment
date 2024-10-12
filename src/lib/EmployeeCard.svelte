@@ -6,6 +6,6 @@
 
 <a href={`${companyName}/${id}`}>
 	<div class="p-4 border-black hover:bg-slate-400">
-		<div class="text-xl font-bold">{name}</div>
+		<div class="text-xl font-bold">{name} - {id}</div>
 	</div>
 </a>
